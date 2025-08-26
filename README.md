@@ -36,7 +36,7 @@ This is a simple implementation of the classic Rock Paper Scissors game built us
 ## Author
 
 Favour Tamfu
-[Your GitHub Profile URL] (Replace with your profile URL)
+
 
 ## License
 
