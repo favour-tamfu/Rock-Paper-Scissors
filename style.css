@@ -1,0 +1,132 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --player-color: #00a8ff;
+    --computer-color: #ff6347; /* Tomato Red */
+    --win-color: #2ecc71; /* Emerald Green */
+    --lose-color: #e74c3c; /* Alizarin Red */
+    --draw-color: #f1c40f; /* Sunflower Yellow */
+    --dark-bg: #1e272e;
+    --light-bg: #2d3a42;
+    --text-color: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background-color: var(--light-bg);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.scoreboard {
+    border-bottom: 2px solid var(--dark-bg);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.scoreboard h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.score-number {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#player-score {
+    color: var(--player-color);
+}
+
+#computer-score {
+    color: var(--computer-color);
+}
+
+.game-area {
+    margin-bottom: 40px;
+}
+
+#result-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-height: 2.25rem; /* Reserve space to prevent layout shift */
+    transition: color 0.3s ease;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.choice-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--dark-bg);
+    background-color: var(--light-bg);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.choice-btn:hover {
+    background-color: var(--dark-bg);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#reset-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--player-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#reset-btn:hover {
+    background-color: #007bb5; /* A darker shade of the player color */
+}
+
+/* --- Dynamic classes we will add with JavaScript --- */
+.win {
+    color: var(--win-color);
+}
+.lose {
+    color: var(--lose-color);
+}
+.draw {
+    color: var(--draw-color);
+}
